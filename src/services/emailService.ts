@@ -47,6 +47,7 @@ export const sendRSVPEmail = async (formData: {
         initEmailJS();
 
         const params = {
+            email: emailConfig.destinationEmail,
             guest_name: formData.name,
             guest_email: formData.email,
             guest_phone: formData.phone,
@@ -112,6 +113,7 @@ export const sendPresentesEmail = async (formData: {
         initEmailJS();
 
         const params = {
+            email: emailConfig.destinationEmail,
             contribution_amount: formData.valor,
             date: new Date().toLocaleString('pt-BR'),
             subject: emailConfig.subjects.presentes
